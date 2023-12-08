@@ -3,21 +3,20 @@ import { FaRegHeart } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa";
 
 const Like = () => {
-
-  const [likes, setLikes] = useState(0)
-  const [liked, setLiked] = useState([false, <FaRegHeart />])
+  const [liked, setLiked] = useState(false);
 
   const handleClick = () => {
-    setLiked([true, <FaHeart />]); setLikes(likes + 1)}
-    
+    if (liked === false) {
+      setLiked((prevState) => !prevState); console.log('liked');
+    } else {
+      setLiked(false); console.log('unliked');
+    }
+  }
 
-return (
+  return (
     <>
-      <h2>Like <FaRegHeart /></h2>
-      {liked.map((liked, index) => {
-        return <h3 key={index}>{liked}</h3>
-      })}
-      <button   onClick={handleClick}>{likes} Like Button</button>
+      <h2 className="header-like">Like Button <FaRegHeart /></h2>
+      <button className="btn" onClick={handleClick}>{liked === true ? <FaHeart /> : <FaRegHeart />}</button>
     </>
   )
 }

@@ -1,0 +1,44 @@
+body {
+background: #8E2DE2;  
+background: -webkit-linear-gradient(to bottom, #4A00E0, #8E2DE2); 
+background: linear-gradient(to bottom, #4A00E0, #8E2DE2); 
+background-size: cover;
+height: 100vh;
+
+}
+
+.header-like {
+    text-align: center;
+    color: bisque;
+}
+
+.header-name {
+    text-align: center;
+    color: bisque;
+    margin-top: 30px;
+}
+
+.header-name2 {
+    text-align: center;
+    color: bisque;
+}
+
+.btn {
+    margin: 0 auto;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    color: bisque;
+    border: 3px dotted bisque;;
+    background-color: #8E2DE2;
+}
+
+.btn:hover {
+    color: bisque;
+    transition: .5s;
+    background-color: #4A00E0;
+    border: 3px dotted #8E2DE2;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}

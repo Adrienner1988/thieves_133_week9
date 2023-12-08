@@ -1,5 +1,6 @@
 import { useState } from "react"
 
+
 interface Game {
   id: number,
   player: {
@@ -24,9 +25,9 @@ const Component = () => {
 
   return (
     <>
-      <h2>Change User</h2>
-      <h2>Hi, my name is {game.player.name}! </h2>
-      <button onClick={handleClick}>Change Name</button>
+      <h2 className="header-name">Change User</h2>
+      <h2 className="header-name2">Hi, my name is {game.player.name}! </h2>
+      <button className="btn" onClick={handleClick}>Change Name</button>
     </>
   )
 }
