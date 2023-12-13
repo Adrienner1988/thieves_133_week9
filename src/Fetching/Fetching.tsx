@@ -3,7 +3,7 @@ import { useEffect, useState, } from 'react';
 
 interface Makeup {
     brand: string;
-    image: string;
+    image?: string;
     item_name: string;
     category: string;
     description: string;
@@ -25,21 +25,23 @@ const getProduct = async () => {
     const response = await fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?brand=${searchProducts}`);
     if (response.ok) {
       const data = await response.json();
-        console.log(data)
+      // const data: Makeup[] = await response.json();
+      // setProducts(data);
+      
+      //I now we should not use any type and should make it explicit. I have tried many different variations of pulling the data and this is the only one that works pulling the images like I want.
         const productData = data.map((item: any) => ({
             brand: item.brand,
             image: item.api_featured_image,
             item_name: item.name,
             category: item.category,
-            description: item.description,
-            product_link: item.product_link,
+            description: item.description
           }));
           setProducts(productData);
     } 
   } catch (error) {
     console.error(error);
   }
-};
+}
     
     return (
       <>
@@ -64,12 +66,11 @@ const getProduct = async () => {
             <img className='brand-image' src={item.image} />
             <h3 className='product-name'>{item.item_name}</h3>
             <h3 className="category">{item.category}</h3>
-            <h3 className="description">{item.description}</h3>
-            <a href={item.product_link}>{item.product_link}</a>
+            <h4 className="description">{item.description}</h4>
           </div>
         ))}
         </div>
       </>
-    );
-  };
+    )
+  }
 export default Fetching
