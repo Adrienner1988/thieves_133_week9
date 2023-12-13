@@ -1,9 +1,9 @@
 body {
-background: #8E2DE2;  
-background: -webkit-linear-gradient(to bottom, #4A00E0, #8E2DE2); 
-background: linear-gradient(to bottom, #4A00E0, #8E2DE2); 
-background-size: cover;
-height: 100vh;
+    background: #8E2DE2;
+    background: -webkit-linear-gradient(to bottom, #4A00E0, #8E2DE2);
+    background: linear-gradient(to bottom, #4A00E0, #8E2DE2);
+    background-size: cover;
+    height: 100vh;
 
 }
 
@@ -31,7 +31,8 @@ height: 100vh;
     padding: 10px;
     border-radius: 10px;
     color: bisque;
-    border: 3px dotted bisque;;
+    border: 3px dotted bisque;
+    ;
     background-color: #8E2DE2;
 }
 
@@ -41,4 +42,83 @@ height: 100vh;
     background-color: #4A00E0;
     border: 3px dotted #8E2DE2;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.header-fetching {
+    text-align: center;
+    color: bisque;
+    margin-top: 35px;
+}
+
+.suggestions {
+    text-align: center;
+    color: bisque;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.search-input {
+    padding: 5px;
+}
+
+/* Card */
+.card-container {
+    padding: 10px;
+    border: 5px solid yellowgreen;
+    overflow: auto;
+    display: block; 
+    /* float: left; */
+    justify-content: space-evenly;
+    display: flex; 
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    width: 80%;
+    margin: auto;
+    background-color: lightgray;
+    padding: 10px;
+    border: 5px solid blueviolet;
+    height:auto;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.brand-name {
+    text-align: center;
+    color: #000;
+}
+
+.brand-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px 5px 0 0;
+}
+
+.product-name {
+    text-align: center;
+    color: #000;
+}
+
+.category {
+    text-align: center;
+    color: #000;
+}
+
+.description {
+text-align: center;
+color: #000;
 }

@@ -1,16 +1,15 @@
-import React from 'react'
 import Like from './Like/Like'
 import Component from './Component/Component'
+import Fetching from './Fetching/Fetching'
 
 
 function App() {
   return (
-    <React.StrictMode>
   <>
     <Like/>
     <Component/>
+    <Fetching />
   </>
-  </React.StrictMode>
   )
 }
 
